@@ -1,9 +1,9 @@
 <template>
-<div class="container h-100">
+<div class="container min-vh-100 p-4">
   <div class="home">
     <HelloWorld/>
   </div>
-  </div>
+  </div >
 </template>
 
 <script>
@@ -20,8 +20,8 @@ export default {
 
 <style scoped>
 .container{
-  background-image: url(https://i.postimg.cc/J49gVnWT/mike-petrucci-c9-FQyq-IECds-unsplash.jpg);
-  height: 680px;
+  background-image: url(https://i.postimg.cc/J49gVnWT/mike-petrucci-c9-FQyq-IECds-unsplash.jpg) !important;
+  background-attachment: fixed;
 }
 
 </style>

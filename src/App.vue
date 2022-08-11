@@ -2,11 +2,13 @@
     <Header/>
     <signUpCompVue/>
     <userCompLoginVue/>
+    <FooterComp/>
 </template>
 
 <script>
 import Header from './components/Header.vue';
 import SignUpView from './views/signUpView.vue';
+import FooterComp from './components/footerComp.vue';
 
 
 
@@ -19,6 +21,7 @@ export default {
   components: {
     Header,
     SignUpView,
+    FooterComp
 }
 }
 </script>

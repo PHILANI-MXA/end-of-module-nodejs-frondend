@@ -1,8 +1,6 @@
 <template>
-<div class="container">
   <div class="hello">
     <h1>{{ msg }}</h1>
-  </div>
   </div>
 </template>
 
@@ -30,5 +28,7 @@ li {
 a {
   color: #42b983;
 }
-
+.hello{
+    background-image: url(https://i.postimg.cc/J49gVnWT/mike-petrucci-c9-FQyq-IECds-unsplash.jpg);
+}
 </style>

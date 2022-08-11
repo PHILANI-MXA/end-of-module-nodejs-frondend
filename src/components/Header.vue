@@ -20,6 +20,9 @@
         <li class="nav-item">
           <router-link class="text-decoration-none text-white" to="/signup">SignUp</router-link>
         </li>
+         <li class="nav-item">
+          <router-link class="text-decoration-none text-white contact" to="/contact">Contact Us</router-link>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -48,9 +51,12 @@ export default {
   display: flex;
   width: 100%;
   padding: 10px;
-  text-decoration: none;
-  flex-direction: row;
+}
 
+nav {
+position:fixed;
+width: 100%;
+top: 0;
 }
 
 </style>
