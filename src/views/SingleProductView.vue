@@ -1,17 +1,17 @@
 <template>
 <div class="container min-vh-100">
-  <Productsomp/>
+  
 </div>
   
 </template>
 
 <script>
 
-import Productsomp from '@/components/productsomp.vue'
+import SingleProductCompVue from '@/components/SingleProductComp.vue';
 
 export default {
   components: {
-  Productsomp,
+  SingleProductCompVue
 }
 }
 </script>

@@ -1,11 +1,10 @@
 <template>
-<h1>search</h1>    <button @click="sortPrice">    sort by price    </button>    <input type="text" id="" v-model="search" placeholder="Search....">    <select name="" id="" v-model="rating">      <option value="All">All</option>      <option value="5 stars">5</option>      <option value="4 stars">4</option>    </select>
-<div id="products" class="container h-100 overflow-auto p-4 my-5 gy-5 bg-success">
+<div id="products" class="container h-100 overflow-auto p-4 my-5 gy-5">
 
 <h2 class="fw-bold display-5 text-white">Products</h2>
 <h4 class="dispaly"></h4>
-<div class="row  justify-content-between gy-2">
-<div v-for="product in products" class="col-md-2 card d-flex" :key="product.id">
+<div class="row  justify-content-between">
+<div product in products class="col-md-2 card d-flex" :key="product.id">
 <div>
   <div class="card-header">
   <h5 class="card-title">{{product.title}}</h5>
@@ -23,19 +22,16 @@
 </template>
 
 <script>
-
 export default {
     computed: {
         products() {
             return this.$store.state.products;
        }
   },
-  mounted() {
-    this.$store.dispatch('fetchProducts');
+  mounted() { 
+    this.$store.dispatch('fetchProduct');
   }
-
 }
-
 
 </script>
 

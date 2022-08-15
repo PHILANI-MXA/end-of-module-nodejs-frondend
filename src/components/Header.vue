@@ -1,8 +1,8 @@
 <template>
 <div>
-    <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-primary bg-danger">
   <div class="container-fluid">
-    <a class="navbar-brand bg-primary" href="#">JustProducts.<img src="https://i.postimg.cc/t4pB77Nr/favicon-32x32.png" alt=""></a>
+    <a class="navbar-brand bg-success" href="#">JustProducts.<img src="https://i.postimg.cc/t4pB77Nr/favicon-32x32.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
@@ -25,7 +25,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <input id="search" class="form-control me-sm-2" type="text" placeholder="Search">
         <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
@@ -40,7 +40,6 @@ import Header from '@/components/Header.vue'
 export default {
   name: '',
   components: {
-     Header
   },
 
 }

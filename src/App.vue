@@ -21,7 +21,7 @@ export default {
   components: {
     Header,
     SignUpView,
-    FooterComp
+    FooterComp,
 }
 }
 </script>
