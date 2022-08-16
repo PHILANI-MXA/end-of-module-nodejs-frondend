@@ -58,4 +58,10 @@ export default {
   width: 100%;
   margin: auto;
 }
+#productimage{
+  height: 60%;
+  width: 60%;
+  border-radius: 10%;
+  margin: auto;
+}
 </style>
