@@ -2,8 +2,8 @@
    <!-- <div id="form" class="">
         <SignUpComp />
    </div> -->
-   <div class="container">
-    <div id="login" class="container min-vh-100">
+   <div class="container min-vh-100">
+    <div id="login" class="">
 <h2 class="fw-bold p-2">Login</h2>
 <div class="col-6 m-auto">
     <form class="container border border-black h-100" @submit.prevent="login">
@@ -69,7 +69,7 @@ export default {
     border: 1px solid black;
     justify-self: center;
     height: 50px;
-    width: 300px;
+    width: fit-content;
     font-size: 20px;
     transition: 0.5s ease;
 }

@@ -104,8 +104,8 @@ export default createStore({
       if (results) {
         router.push({ name: 'admin' });
       }
-    },
-    addTocart: async (context, payload) => {
+    }
+   /* addTocart: async (context, payload) => {
       fetch(grpjpURL + `users/${context.state.user.id}/cart`, {
         method: 'POST',
         headers: {
@@ -119,7 +119,7 @@ export default createStore({
             router.push('/cart'), 5000
           });
         });
-    }
+    }*/
   },
   modules: {
   }

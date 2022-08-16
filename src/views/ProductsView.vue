@@ -1,5 +1,6 @@
 <template>
 <div class="container min-vh-100">
+<h3>Please login to buy and view products details</h3>
 <h1>search</h1>    <button @click="sortPrice">    sort by price    </button>    <input type="text" id="" v-model="search" placeholder="Search">    <select name="" id="" v-model="rating">      <option value="All">All</option>      <option value="electronic devices">Electronic devices</option>      <option value="home appliances">Home appliances</option>  <option value="food">Food</option>  <option value="clothing">Clothing</option><option value="bags">Bags </option>  <option value="home appliances">Liqour</option> Liqour </select>  
 <div id="products" class="container h-100 overflow-auto p-4 my-5 gy-5">
 
