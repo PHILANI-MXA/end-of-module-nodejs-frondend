@@ -1,8 +1,8 @@
 <template>
 <div>
-    <nav class="navbar navbar-expand-lg navbar-primary bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-primary ">
   <div class="container-fluid">
-    <a class="navbar-brand bg-success" href="#">JustProducts.<img src="https://i.postimg.cc/t4pB77Nr/favicon-32x32.png" alt=""></a>
+    <a class="navbar-brand my-2 my-sm-0 " href="#">JustProducts.<img src="https://i.postimg.cc/mr99yjBM/favicon-32x32.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
@@ -25,8 +25,8 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input id="search" class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        <input id="search" class="form-control me-sm-2" type="text" placeholder="Search" v-model="search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -37,12 +37,68 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import ProductsViewVue from '@/views/ProductsView.vue'
 export default {
-  name: '',
-  components: {
+    data() {
+    return {
+      search:'',
+    }
   },
+    computed: {
+       products() {
+      return this.$store.state.products?.filter(products =>{
+          let isMatch = true;
+          if (!products.title.toLowerCase().includes(this.search.toLowerCase())) {
+              isMatch = false;
+          }
+          return isMatch
+          })
+        }
+  },
+  mounted() {
+    this.$store.dispatch('fetchProducts');
+  },
+  methods: {
+    addToCart() {
+      const item = {
+        title: '',
+        category: '',
+        product_description: '',
+        img: '',
+        price: '',
+      }
+    }
+  }
+   /*data(){
+    return{
+      search: ""
+    }
+  },
+  methods: {
+    categoty() {
+      $this.$store.commit("product.category");
+    }
+  },
+  mounted() {
+    this.$store.dispatch('getProducts')
+  },
+  computed: {
+    products() {
+      return this.$store.state.products?.filter(product => {
+        let isMatch = true;
+        if (!product.name.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false } 
+      return isMatch
+      
+    });
+    },
+
+  },*/
 
 }
+
+
+
+
 </script>
 
 <style>
@@ -51,11 +107,21 @@ export default {
   width: 100%;
   padding: 10px;
 }
+.navbar-brand{
+  font-style: italic;
+}
+
+.btn{
+  color: white;
+  border-color: white;
+}
 
 nav {
 position:fixed;
 width: 100%;
 top: 0;
+background-color: lightblue;
+z-index:50;
 }
 
 </style>

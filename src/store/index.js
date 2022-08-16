@@ -1,7 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
 import router from '@/router';
-// import router from '@/router';
 
 const grpjpURL = 'https://group-jp-api.herokuapp.com/';
 export default createStore({
@@ -40,8 +39,9 @@ export default createStore({
         context.commit('setProducts', results);
       }
     },
-    fetchProduct: async (context) => {
-      const res = await axios.get(grpjpURL + 'productid');
+    fetchProduct: async (context, id) => {
+      const res = await axios.get(grpjpURL + 'products/' + id);
+      console.log(res.data);
       const { results } = await res.data;
       if (results) {
         context.commit('setProduct', results);
@@ -55,7 +55,7 @@ export default createStore({
       }
     },
     fetchUser: async (context) => {
-      const res = await axios.get('https://group-jp-api.herokuapp.com/user');
+      const res = await axios.get(grpjpURL + 'user');
       const { results } = await res.data;
       if (results) {
         context.commit('setUser', results);
@@ -73,30 +73,52 @@ export default createStore({
         join_date
       };
       const res = await axios.post(grpjpURL + 'users/register', data);
-      const { results } = await res.data;
-      console.log(results);
+      const results = await res.data;
       if (results) {
         context.commit('setUsers', results);
       }
     },
     login: async (context, payload) => {
       const { email, user_password } = payload;
-      const result = await fetch(grpjpURL + 'users/login', {
+      // fetch(grpjpURL + 'users/login', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-type': 'application/json; charset=UTF-8'
+      //   },
+      //   body: JSON.stringify({
+      //     email: email,
+      //     user_password: user_password
+      //   })
+      // }).then((res) => res.json())
+      //   .then(data => {
+      //     if (data) {
+      //       router.push({ name: 'products' });
+      //     }
+      //   });
+      const data = {
+        email,
+        user_password
+      };
+      const res = await axios.post(grpjpURL + 'users/login', data);
+      const results = await res.data;
+      if (results) {
+        router.push({ name: 'products' });
+      }
+    },
+    addTocart: async (context, payload) => {
+      fetch(grpjpURL + `users/${context.state.user.id}/cart`, {
         method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=UTF-8'
         },
-        body: JSON.stringify({
-          email: email,
-          user_password: user_password
-        })
-      });
-      if (result) {
-        router.push({ name: 'home' });
-        alert('');
-      } else {
-        this.errMsg = 'error';
-      }
+        body: JSON.stringify(payload)
+      }).then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setTimeout(() => {
+            router.push('/cart'), 5000
+          });
+        });
     }
   },
   modules: {

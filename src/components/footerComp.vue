@@ -83,6 +83,10 @@ export default {
   line-height:24px;
   color:#737373;
 }
+footer{
+   z-index: 50;
+}
+
 .site-footer hr
 {
   border-top-color:#bbb;

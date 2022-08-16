@@ -37,7 +37,7 @@ export default {
             this.$store.dispatch('login', {
             email: this.email,
             user_password: this.user_password,
-        });
+            });
         }
     }
     

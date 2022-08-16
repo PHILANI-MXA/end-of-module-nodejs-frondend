@@ -44,36 +44,7 @@
 // import SignUpComp from '@/components/signUpComp.vue';
 
 export default {
-    // components: { SignUpComp },
-    // data() {
-    //     return {
-    //         user_fullName: "",
-    //         email: "",
-    //         user_password: "",
-    //         user_role: "",
-    //         phone_number: "",
-    //         join_date: "",
-            
-    //     }
-    // },
-    // computed: {
-    //     user() {
-    //         return this.$store.state.user;
-    //     }
-    // },
 
-    // methods: {
-    //     register() {
-    //         return this.$store.dispatch("register", {
-    //             user_fullName: this.user_fullName,
-    //             email: this.email,
-    //             user_password: this.user_password,
-    //             user_role: this.user_role,
-    //             phone_number: this.phone_number,
-    //             join_date: this.join_date
-    //         })
-    //     }
-    // }
     data() {
         return {
             user_fullname: '',

@@ -16,9 +16,13 @@ export default {
 </script>
 
 <style scoped>
+body{
+
+}
 .container-fluid{
-  background-image: url(https://i.postimg.cc/vmp0j4nV/andy-hermawan-u-Fd-CDgno-NVI-unsplash.jpg) !important;
+  background: url(https://i.postimg.cc/Hkm6frvf/Blue.jpg) no-repeat center center/cover  !important;
   background-attachment: fixed;
+  background-size: auto;
 }
 
 </style>
