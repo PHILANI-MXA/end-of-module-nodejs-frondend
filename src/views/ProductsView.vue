@@ -16,10 +16,10 @@
   <img class="img-fluid image m-auto" :src="product.img" :alt="product.title">
     <p class="card-text description productdesc">{{product.product_description}}</p>
     <p class="card-text">R{{product.price}}</p>
-    <router-link :to="{name: 'cart',params:{id:product.product_id}}"> <button class="cart" @click="addToCart">add to cart</button></router-link>
+    <!-- <router-link :to="{name: 'cart',params:{id:product.product_id}}"> <button class="cart" @click="addToCart">add to cart</button></router-link>
     <router-link :to="{name:'SingleProduct',params:{id:product.product_id}}">
     <button>View</button>
-    </router-link>
+    </router-link> -->
   </div>
 </div>
 </div>

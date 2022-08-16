@@ -28,7 +28,7 @@
     </li>
     </ul>
     </div>
-    <div class="row">
+    <div class="row mb-0">
     <ul>
     <li>
     <button type="button" class="btn btn-danger lh-2 list-inline-item mb-0">Delete</button>
