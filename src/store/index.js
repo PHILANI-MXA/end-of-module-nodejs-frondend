@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
+import router from '@/router';
 // import router from '@/router';
 
 const grpjpURL = 'https://group-jp-api.herokuapp.com/';
@@ -63,31 +64,16 @@ export default createStore({
 
     register: async (context, payload) => {
       const { user_fullname, email, user_password, user_role, phone_number, join_date } = payload;
-      // fetch(grpjpURL + '/users/register', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-type': 'application/json; charset=UTF-8'
-      //   },
-      //   body: JSON.stringify({
-      //     user_fullname: user_fullname,
-      //     email: email,
-      //     user_password: user_password,
-      //     phone_number: phone_number,
-      //     join_date: join_date
-      //   })
-      // })
-      //   .then((response) => response.json())
-      //   .then((json) => context.commit("setUsers", json));
-      let data = {
+      const data = {
         user_fullname,
         email,
         user_password,
         user_role,
         phone_number,
         join_date
-      }
-      let res = await axios.post(grpjpURL + 'users/register', data);
-      let {results} = await res.data;
+      };
+      const res = await axios.post(grpjpURL + 'users/register', data);
+      const { results } = await res.data;
       console.log(results);
       if (results) {
         context.commit('setUsers', results);
@@ -95,7 +81,7 @@ export default createStore({
     },
     login: async (context, payload) => {
       const { email, user_password } = payload;
-      const result = await fetch(grpjpURL + 'user', {
+      const result = await fetch(grpjpURL + 'users/login', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json; charset=UTF-8'
@@ -106,8 +92,8 @@ export default createStore({
         })
       });
       if (result) {
-        // router.push({ name: "home" })
-        // alert('Loading...')
+        router.push({ name: 'home' });
+        alert('');
       } else {
         this.errMsg = 'error';
       }

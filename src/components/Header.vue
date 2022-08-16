@@ -21,7 +21,7 @@
           <router-link class="text-decoration-none text-white" to="/signup">SignUp</router-link>
         </li>
          <li class="nav-item">
-          <router-link class="text-decoration-none text-white contact" to="/contact">Contact Us</router-link>
+          <router-link class="text-decoration-none text-white contact float-end" to="/cart"><i class="bi bi-cart-plus"></i></router-link>
         </li>
       </ul>
       <form class="d-flex">
