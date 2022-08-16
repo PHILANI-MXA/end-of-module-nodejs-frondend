@@ -4,7 +4,7 @@
    </div> -->
     <div id="login" class="container min-vh-100">
 <h2 class="fw-bold p-2">Register</h2>
-<div class="col-6 m-auto">
+<div class="col-md-6 m-auto">
     <form class="container border border-black h-100" @submit.prevent="register">
     <h4 class="text-decoration-underline fw-bold text-white">Sign Up</h4>
   <div class="form-group">

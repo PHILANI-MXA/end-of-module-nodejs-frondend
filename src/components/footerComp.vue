@@ -5,7 +5,9 @@
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <h6>About</h6>
-            <p class="text-justify">JustProducts.com <i>Get anything you can imagine</i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nisi vitae repellendus adipisci autem qui, quo eligendi omnis. Aliquid quae ipsa saepe nostrum minus corporis sapiente maiores, fugiat, doloribus modi, consequatur aut ea accusamus quibusdam iure odio architecto. Labore inventore dignissimos eos doloremque soluta libero eligendi animi eum sit error?</p>
+            <p class="text-justify">
+Beginning in early 2018, Naspers increased its investment in justproducts.com to 96%. In March 2022, Justproducts.com and Spree (also part of the Naspers family) merged to provide customers with the latest on-trend local and international fashion.
+Now, takealot.com is South Africa’s largest, most innovative ecommerce retailer, with over 20 employees. At the core of everything we do is our customer. We are passionate about providing great customer experiences, beginning with the moment you land on our site or app, until the product you order is delivered safely into your hands.</p>
           </div>
 
           <div class="col-xs-6 col-md-3">

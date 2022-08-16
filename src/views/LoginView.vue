@@ -2,6 +2,7 @@
    <!-- <div id="form" class="">
         <SignUpComp />
    </div> -->
+   <div class="container">
     <div id="login" class="container min-vh-100">
 <h2 class="fw-bold p-2">Login</h2>
 <div class="col-6 m-auto">
@@ -17,6 +18,7 @@
   </div>
   <button class="btn btn-primary my-5" type="submit">Submit</button>
 </form>
+</div>
 </div>
 </div>
 

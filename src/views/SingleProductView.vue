@@ -1,6 +1,8 @@
 <template>
+
+<div class="container">
   <div v-if="product" class="single">
-    <router-link to="/products">
+    <router-link to="/admin">
       <div class="backbutton">
         <h1>Back</h1>
       </div>
@@ -29,6 +31,7 @@
 
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -49,5 +52,10 @@ export default {
 <style scoped>
 .productimage{
   size: 50%;
+}
+
+.product_description{
+  width: 100%;
+  margin: auto;
 }
 </style>

@@ -20,6 +20,9 @@
         <li class="nav-item">
           <router-link class="text-decoration-none text-white" to="/signup">SignUp</router-link>
         </li>
+          <li class="nav-item">
+          <router-link class="text-decoration-none text-white" to="/admin">Admin</router-link>
+        </li>
          <li class="nav-item">
           <router-link class="text-decoration-none text-white contact float-end" to="/cart"><i class="bi bi-cart-plus"></i></router-link>
         </li>

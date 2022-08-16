@@ -47,4 +47,8 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+body{
+  background: 
+  url(https://i.postimg.cc/Hkm6frvf/Blue.jpg) no-repeat center center/cover  !important;
+}
 </style>

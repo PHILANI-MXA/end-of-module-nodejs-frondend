@@ -102,7 +102,7 @@ export default createStore({
       const res = await axios.post(grpjpURL + 'users/login', data);
       const results = await res.data;
       if (results) {
-        router.push({ name: 'products' });
+        router.push({ name: 'admin' });
       }
     },
     addTocart: async (context, payload) => {

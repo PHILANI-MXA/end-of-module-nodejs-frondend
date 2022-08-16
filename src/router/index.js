@@ -34,6 +34,11 @@ const routes = [
     path: '/singleProduct/:id',
     name: 'SingleProduct',
     component: () => import(/* webpackChunkName: "Login" */ '@/views/SingleProductView.vue')
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import(/* webpackChunkName: "Login" */ '@/views/adminView.vue')
   }
 ];
 
